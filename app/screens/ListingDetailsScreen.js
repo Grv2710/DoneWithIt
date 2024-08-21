@@ -11,11 +11,13 @@ const ListingDetailsScreen = () => {
       <View style={styles.detailContainer}>
         <AppText style={styles.title}>Chair for sale</AppText>
         <AppText style={styles.price}>$200</AppText>
-        <ListItem
-          title="Gaurav Kumar"
-          subTitle="5 listing"
-          image="https://cdn-icons-png.flaticon.com/512/10226/10226381.png"
-        />
+        <View style={styles.userContainer}>
+          <ListItem
+            title="Gaurav Kumar"
+            subTitle="5 listing"
+            image="https://cdn-icons-png.flaticon.com/512/10226/10226381.png"
+          />
+        </View>
       </View>
     </View>
   );
@@ -43,6 +45,9 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "500",
+  },
+  userContainer: {
+    marginVertical: 50,
   },
 });
 export default ListingDetailsScreen;
