@@ -8,7 +8,7 @@ const Screen = ({ children }) => {
 
 const styles = StyleSheet.create({
   screen: {
-    padding: Constants.statusBarHeight,
+    paddingTop: Constants.statusBarHeight,
   },
 });
 export default Screen;
