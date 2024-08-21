@@ -10,7 +10,13 @@ export default function ViewImageScreen() {
       <View style={styles.closeIcon}>
         <MaterialCommunityIcons size={35} name="close" color="white" />
       </View>
-      <View style={styles.deleteIcon}></View>
+      <View style={styles.deleteIcon}>
+        <MaterialCommunityIcons
+          name="trash-can-outline"
+          size={35}
+          color="white"
+        />
+      </View>
       <Image
         resizeMode="contain"
         style={styles.image}
@@ -27,9 +33,6 @@ const styles = StyleSheet.create({
     left: 30,
   },
   deleteIcon: {
-    width: 50,
-    height: 50,
-    backgroundColor: colors.secondary,
     position: "absolute",
     top: 40,
     right: 30,

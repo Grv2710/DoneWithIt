@@ -9,7 +9,7 @@ import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 export default function App() {
   return (
     <View style={styles.container}>
-      <ListingDetailsScreen />
+      <ViewImageScreen />
     </View>
   );
 }
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#f8f4f4",
     // padding: 20,
     // paddingTop: 100,
-    // flex: 1,
+    flex: 1,
     // justifyContent: "center",
     // alignItems: "center",
   },
