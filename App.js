@@ -6,10 +6,11 @@ import AppText from "./app/components/AppText";
 import AppButton from "./app/components/AppButton";
 import Card from "./app/components/Card";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
 export default function App() {
   return (
     <View style={styles.container}>
-      <ViewImageScreen />
+      <MessagesScreen />
     </View>
   );
 }
