@@ -1,4 +1,4 @@
-import { View, FlatList } from "react-native";
+import { View, FlatList, Text } from "react-native";
 import React from "react";
 import ListItem from "../components/ListItem";
 import Screen from "../components/Screen";
@@ -27,9 +27,11 @@ const MessagesScreen = () => {
           keyExtractor={(message) => message.id.toString()}
           renderItem={({ item }) => (
             <ListItem
+              onPress={() => console.log("clicked")}
               title={item.title}
               subTitle={item.description}
               image={item.image}
+              renderRightActions={() => <Text>hi</Text>}
             />
           )}
           ItemSeparatorComponent={ListItemSeparator}
