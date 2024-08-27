@@ -31,7 +31,7 @@ const MessagesScreen = () => {
               title={item.title}
               subTitle={item.description}
               image={item.image}
-              renderRightActions={() => <Text>hi</Text>}
+              renderRightActions={ListItemDeleteAction}
             />
           )}
           ItemSeparatorComponent={ListItemSeparator}
