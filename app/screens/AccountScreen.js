@@ -49,12 +49,17 @@ const AccountScreen = () => {
           )}
         />
       </View>
+      <ListItem
+        title="Log Out"
+        IconComponent={<Icon name="logout" backgroundColor="#ffe66d" />}
+      />
     </View>
   );
 };
 const styles = StyleSheet.create({
   container: {
     marginVertical: 20,
+    backgroundColor: "#fff",
   },
 });
 export default AccountScreen;
