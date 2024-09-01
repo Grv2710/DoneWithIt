@@ -6,7 +6,7 @@ import colors from "../config/colors";
 const Card = ({ title, subTitle, image }) => {
   return (
     <View style={styles.card}>
-      <Image style={styles.image} source={image} resizeMode="cover" />
+      <Image style={styles.image} source={{ uri: image }} resizeMode="cover" />
       <View style={styles.detailsContainer}>
         <AppText>{title}</AppText>
         <AppText style={styles.subTitle}>{subTitle}</AppText>
