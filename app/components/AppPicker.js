@@ -2,8 +2,9 @@ import { View, TextInput, StyleSheet } from "react-native";
 import React from "react";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import defaultStyles from "../config/styles";
+import AppText from "./AppText";
 
-const AppTextInput = ({ icon, ...otherProps }) => {
+const AppPicker = ({ icon, placeholder, ...otherProps }) => {
   return (
     <View style={styles.container}>
       {icon && (
@@ -14,12 +15,7 @@ const AppTextInput = ({ icon, ...otherProps }) => {
           color={defaultStyles.colors.medium}
         />
       )}
-      <TextInput
-        {...otherProps}
-        clearButtonMode={"always"}
-        placeholderTextColor={defaultStyles.colors.medium}
-        style={[defaultStyles.text, styles.textInput]}
-      />
+      <AppText>{placeholder}</AppText>
     </View>
   );
 };
@@ -40,4 +36,4 @@ const styles = StyleSheet.create({
     marginRight: 5,
   },
 });
-export default AppTextInput;
+export default AppPicker;

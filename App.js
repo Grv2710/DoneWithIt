@@ -14,6 +14,7 @@ import ListItem from "./app/components/ListItem";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingsScreen from "./app/screens/ListingsScreen";
 import AppTextInput from "./app/components/AppTextInput";
+import AppPicker from "./app/components/AppPicker";
 export default function App() {
   return (
     <GestureHandlerRootView>
@@ -35,7 +36,8 @@ export default function App() {
         /> */}
 
         {/* <ListingsScreen /> */}
-        <AppTextInput icon="email" />
+        {/* <AppTextInput icon="email" /> */}
+        <AppPicker icon="email" placeholder="hellooo" />
       </Screen>
     </GestureHandlerRootView>
   );
