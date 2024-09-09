@@ -15,9 +15,15 @@ import AppText from "./AppText";
 import Screen from "./Screen";
 import PickerItem from "./PickerItem";
 
-const AppPicker = ({ icon, items, placeholder, ...otherProps }) => {
+const AppPicker = ({
+  icon,
+  items,
+  placeholder = "Choose Category",
+  selectedItem,
+  onSelectItem,
+}) => {
   const [isVissible, setIsVissible] = useState(false);
-  const [selection, setSelection] = useState({});
+
   return (
     <>
       <TouchableWithoutFeedback onPress={() => setIsVissible(!isVissible)}>
@@ -31,7 +37,7 @@ const AppPicker = ({ icon, items, placeholder, ...otherProps }) => {
             />
           )}
           <AppText style={styles.textInput}>
-            {selection ? selection.lable : "Choose Category"}
+            {selection ? selectedItem.label : placeholder}
           </AppText>
           <MaterialCommunityIcons
             name="chevron-down"
@@ -53,7 +59,10 @@ const AppPicker = ({ icon, items, placeholder, ...otherProps }) => {
             renderItem={({ item }) => (
               <PickerItem
                 label={item.label}
-                onPress={() => setSelection(item)}
+                onPress={() => {
+                  onSelectItem(item);
+                  setIsVissible(!isVissible);
+                }}
               />
             )}
           />

@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import React from "react";
+import React, { useState } from "react";
 import WelcomsScreen from "./app/screens/WelcomsScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import AppText from "./app/components/AppText";
@@ -18,11 +18,12 @@ import AppPicker from "./app/components/AppPicker";
 
 const categories = [
   { label: "Furniture", value: 1 },
-  { label: "electronic", value: 2 },
-  { label: "clothing", value: 3 },
+  { label: "Electronic", value: 2 },
+  { label: "Clothing", value: 3 },
 ];
 
 export default function App() {
+  const [selection, setSelection] = useState(null);
   return (
     <GestureHandlerRootView>
       {/* <View style={styles.container}>
@@ -44,7 +45,13 @@ export default function App() {
 
         {/* <ListingsScreen /> */}
         {/* <AppTextInput icon="email" /> */}
-        <AppPicker items={categories} icon="apps" placeholder="Category" />
+        <AppPicker
+          selectedItem={selection}
+          onSelectItem={setSelection}
+          items={categories}
+          icon="apps"
+          placeholder="Category"
+        />
         <AppTextInput icon="email" placeholder="your email" />
       </Screen>
     </GestureHandlerRootView>
