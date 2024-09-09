@@ -35,7 +35,7 @@ export default function App() {
         /> */}
 
         {/* <ListingsScreen /> */}
-        <AppTextInput/>
+        <AppTextInput icon="email" />
       </Screen>
     </GestureHandlerRootView>
   );
