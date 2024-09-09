@@ -33,9 +33,7 @@ const styles = StyleSheet.create({
     backgroundColor: defaultStyles.colors.light,
     marginVertical: 10,
   },
-  textInput: {
-    width: "100%",
-  },
+  textInput: { flex: 1 },
   icon: {
     marginRight: 5,
   },
