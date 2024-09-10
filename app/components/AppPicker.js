@@ -37,7 +37,7 @@ const AppPicker = ({
             />
           )}
           <AppText style={styles.textInput}>
-            {selection ? selectedItem.label : placeholder}
+            {selectedItem ? selectedItem.label : placeholder}
           </AppText>
           <MaterialCommunityIcons
             name="chevron-down"
