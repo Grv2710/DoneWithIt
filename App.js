@@ -15,21 +15,23 @@ import AccountScreen from "./app/screens/AccountScreen";
 import ListingsScreen from "./app/screens/ListingsScreen";
 import AppTextInput from "./app/components/AppTextInput";
 import AppPicker from "./app/components/AppPicker";
+import LoginScreen from "./app/screens/LoginScreen";
 
-const categories = [
-  { label: "Furniture", value: 1 },
-  { label: "Electronic", value: 2 },
-  { label: "Clothing", value: 3 },
-];
+// const categories = [
+//   { label: "Furniture", value: 1 },
+//   { label: "Electronic", value: 2 },
+//   { label: "Clothing", value: 3 },
+// ];
 
 export default function App() {
-  const [selection, setSelection] = useState(null);
+  // const [selection, setSelection] = useState(null);
   return (
     <GestureHandlerRootView>
       {/* <View style={styles.container}>
         <MessagesScreen />
       </View> */}
       <Screen>
+        <LoginScreen />
         {/* <ListItem
           title="hi title"
           subTitle="hi subtitle"
@@ -45,14 +47,14 @@ export default function App() {
 
         {/* <ListingsScreen /> */}
         {/* <AppTextInput icon="email" /> */}
-        <AppPicker
+        {/* <AppPicker
           selectedItem={selection}
           onSelectItem={setSelection}
           items={categories}
           icon="apps"
           placeholder="Category"
         />
-        <AppTextInput icon="email" placeholder="your email" />
+        <AppTextInput icon="email" placeholder="your email" /> */}
       </Screen>
     </GestureHandlerRootView>
   );
