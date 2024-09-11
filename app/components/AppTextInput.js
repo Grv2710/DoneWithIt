@@ -9,7 +9,7 @@ const AppTextInput = ({ icon, ...otherProps }) => {
       {icon && (
         <MaterialCommunityIcons
           style={styles.icon}
-          name="email"
+          name={icon}
           size={20}
           color={defaultStyles.colors.medium}
         />
@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     borderWidth: 1,
-    padding: 10,
-    borderRadius: 15,
+    padding: 15,
+    borderRadius: 25,
     width: "100%",
     backgroundColor: defaultStyles.colors.light,
     marginVertical: 10,
