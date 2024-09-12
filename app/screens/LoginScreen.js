@@ -5,14 +5,12 @@ import AppButton from "../components/AppButton";
 import { Formik } from "formik";
 
 const LoginScreen = () => {
-  const [email, setemail] = useState("");
-  const [password, setpassword] = useState("");
   return (
     <View style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logoMobile.jpg")} />
       <Formik
         initialValues={{ email: "", password: "" }}
-        onSubmit={(value) => console.log(value)}
+        onSubmit={(values) => console.log(values)}
       >
         {({ handleChange, handleSubmit }) => (
           <>
